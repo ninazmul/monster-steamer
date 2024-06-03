@@ -15,11 +15,15 @@ import mCard from "../assets/Footer/mastercard-dark logo.svg";
 import discover from "../assets/Footer/discover logo.svg";
 import aExpress from "../assets/Footer/American express.svg";
 import { Rating } from "flowbite-react";
+import ServeArea from "./ServeArea";
 
 
 const Footers = () => {
   return (
-    <Footer bgDark className="rounded-none bg-[#00343E]">
+    <Footer bgDark className="rounded-none bg-[#00343E] relative">
+      <div className="absolute top-[-400px]">
+        <ServeArea />
+      </div>
       <div className="w-full mx-12 mb-12 mt-32">
         <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
           <img src={logo} alt="monster steamer" className="mr-3 h-6 sm:h-9" />
