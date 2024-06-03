@@ -14,8 +14,8 @@ const Header = () => {
   const logo = theme === "dark" ? lightLogo : darkLogo;
 
   return (
-    <MegaMenu>
-      <div className="w-full mx-auto flex flex-wrap items-center justify-between p-4 md:space-x-8">
+    <MegaMenu className="dark:bg-[rgb(8,7,39)]">
+      <div className="w-full mx-auto flex flex-wrap items-center justify-between p-4 md:space-x-8 ">
         <Navbar.Brand href="/">
           <img
             src={logo}

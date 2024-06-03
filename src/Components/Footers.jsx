@@ -40,7 +40,7 @@ const Footers = () => {
           <Footer.LinkGroup className="flex items-center gap-2">
             <FaFacebook className="text-[#00CCF8] bg-[#002932] p-1 text-2xl rounded-lg" />
             <FaInstagram className="text-[#00CCF8] bg-[#002932] p-1 text-2xl rounded-lg" />
-            <FaArrowUpLong className="text-[#00CCF8] bg-[#002932] p-1 text-2xl rounded-lg" />
+            <FaArrowUpLong className="text-[#00CCF8] bg-[#002932] p-1.5 text-2xl rounded-lg" />
           </Footer.LinkGroup>
         </div>
         <div className="w-full bg-[#002932] m-8 mx-auto rounded-xl">
