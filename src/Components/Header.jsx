@@ -1,9 +1,9 @@
-import { Button, Navbar } from "flowbite-react";
-import { Link } from "react-router-dom";
-import ActiveLink from "./ActiveLink";
+import { Button, MegaMenu, Navbar } from "flowbite-react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme } from "../redux/theme/themeSlice";
 import { FaMoon, FaSun } from "react-icons/fa";
+import lightLogo from "../assets/Logo-light.png";
+import darkLogo from "../assets/Logo-Dark.png";
 
 
 const Header = () => {
@@ -11,48 +11,190 @@ const Header = () => {
   const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
+  const logo = theme === "dark" ? lightLogo : darkLogo;
 
-    const navBtn = (
-        <ul className="md:flex md:gap-4 lg:gap-10 font-bold uppercase">
-            
-        <ActiveLink spy="true" smooth="true" to="/">
-          <li>Home </li>
-        </ActiveLink>
-
-        <ActiveLink spy="true" smooth="true" to="/events">
-          <li>Events</li>
-        </ActiveLink>
-
-        <ActiveLink spy="true" smooth="true" to="/about">
-          <li>About Us</li>
-        </ActiveLink>
-      </ul>
-    );
-  
   return (
-    <Navbar
-      fluid
-      className="bg-gradient-to-r from-[#4c8e40] to-[#81b619] rounded-none"
-    >
-      <Link to="/">
-        <img src="sdfd" className="mr-3 h-10 sm:h-14" alt="Prafulla Logo" />
-      </Link>
-      <div className="flex md:order-2 gap-4">
-        <Button
-          className=""
-          color="none"
-          pill
-          onClick={() => dispatch(toggleTheme())}
-          rounded
-        >
-          {theme === "light" ? <FaSun size={24} /> : <FaMoon size={24} />}
-        </Button>
-
+    <MegaMenu>
+      <div className="w-full mx-auto flex flex-wrap items-center justify-between p-4 md:space-x-8">
+        <Navbar.Brand href="/">
+          <img
+            src={logo}
+            alt="monster-steamer"
+            className={`mr-3 h-6 sm:h-9 ${
+              theme === "dark" ? "dark-class" : "light-class"
+            }`}
+          />
+        </Navbar.Brand>
+        <div className="order-2 hidden items-center md:flex">
+          <Button
+            className=""
+            color="none"
+            pill
+            onClick={() => dispatch(toggleTheme())}
+            rounded
+          >
+            {theme === "light" ? <FaSun size={24} /> : <FaMoon size={24} />}
+          </Button>
+          <Button className="bg-[#00CCF8]" pill>
+            Book Online
+          </Button>
+        </div>
         <Navbar.Toggle />
-        
+        <Navbar.Collapse>
+          <Navbar.Link>
+            <MegaMenu.Dropdown className="rounded-xl" toggle={<>Services</>}>
+              <ul className="grid grid-cols-2">
+                <div className="space-y-4 p-4">
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Carpet Cleaning
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Upholstery Cleaning
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Tile and Grout Cleaning
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Commercial Cleaning
+                    </a>
+                  </li>
+                </div>
+                <div className="space-y-4 p-4">
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Air Duct Cleaning
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Water Damage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Pressure Washing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Dryer Vent Cleaning
+                    </a>
+                  </li>
+                </div>
+              </ul>
+            </MegaMenu.Dropdown>
+          </Navbar.Link>
+          <Navbar.Link>
+            <MegaMenu.Dropdown className="rounded-xl" toggle={<>About</>}>
+              <ul className="grid grid-cols-2">
+                <div className="space-y-4 p-4">
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Carpet Cleaning
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Upholstery Cleaning
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Tile and Grout Cleaning
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Commercial Cleaning
+                    </a>
+                  </li>
+                </div>
+                <div className="space-y-4 p-4">
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Air Duct Cleaning
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Water Damage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Pressure Washing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:text-primary-600 dark:hover:text-primary-500"
+                    >
+                      Dryer Vent Cleaning
+                    </a>
+                  </li>
+                </div>
+              </ul>
+            </MegaMenu.Dropdown>
+          </Navbar.Link>
+          <Navbar.Link href="#">Subscription</Navbar.Link>
+          <Navbar.Link href="#">Blog</Navbar.Link>
+          <Navbar.Link href="#">Contact</Navbar.Link>
+        </Navbar.Collapse>
       </div>
-      <Navbar.Collapse>{navBtn}</Navbar.Collapse>
-    </Navbar>
+    </MegaMenu>
   );
 };
 

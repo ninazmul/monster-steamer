@@ -7,16 +7,14 @@ import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
-    <div className="max-w-7xl mx-auto">
-      <BrowserRouter>
-        <ScrollToTop />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-        <Footers />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footers />
+    </BrowserRouter>
   );
 }
 
