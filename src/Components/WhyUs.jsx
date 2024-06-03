@@ -10,7 +10,7 @@ export default function WhyUs() {
   return (
     <div className="m-20 flex justify-around gap-20 h-96 items-center relative">
       <div className="flex flex-col gap-4 w-1/2">
-        <h1 className="text-6xl font-inter font-bold">Why Choose Us?</h1>
+        <h1 className="text-6xl font-inter font-bold uppercase">Why Choose Us?</h1>
         <p className="text-gray-500">
           Our reputation has been built by word-of-mouth referrals since the
           very beginning in 2010, and we’re committed to providing the same

@@ -1,4 +1,5 @@
 import Banner from "../Components/Banner";
+import Reviews from "../Components/Reviews";
 import Services from "../Components/Services";
 import Stats from "../Components/Stats";
 import Video from "../Components/Video";
@@ -13,7 +14,8 @@ const Home = () => {
       <Stats />
       <Services />
       <WhyUs />
-      <Video/>
+      <Video />
+      <Reviews/>
     </div>
   );
 };

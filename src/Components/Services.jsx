@@ -63,7 +63,7 @@ export default function Services() {
     <div className="bg-[#153339] px-20 pb-16 pt-32">
       <div className="flex items-center justify-between py-4">
         <div>
-          <h1 className="text-7xl font-bold text-white font-inter">
+          <h1 className="text-7xl font-bold text-white font-inter uppercase">
             Quality Services
           </h1>
         </div>
