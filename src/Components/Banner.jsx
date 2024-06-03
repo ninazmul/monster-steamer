@@ -14,13 +14,12 @@ export default function Banner() {
           scrolling="no"
         ></iframe>
         <h1 className="uppercase text-8xl font-bold font-inter text-[#00CCF8]">
-          Carpet
+         Carpet
         </h1>
       </div>
       <h1 className="uppercase text-8xl font-bold font-inter">
         {" "}
-        <span className="text-[#00CCF8]">Cleaning</span>
-        in san Diego.
+        <span className="text-[#00CCF8]">Cleaning</span> in san Diego.
       </h1>
       <div className="py-10 flex items-center">
         <div>
