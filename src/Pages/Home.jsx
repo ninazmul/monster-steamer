@@ -1,6 +1,7 @@
 import Banner from "../Components/Banner";
 import Services from "../Components/Services";
 import Stats from "../Components/Stats";
+import WhyUs from "../Components/WhyUs";
 
 
 const Home = () => {
@@ -9,7 +10,8 @@ const Home = () => {
     <div className="min-h-screen">
       <Banner />
       <Stats />
-      <Services/>
+      <Services />
+      <WhyUs/>
     </div>
   );
 };

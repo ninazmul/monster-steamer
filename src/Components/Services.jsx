@@ -100,7 +100,7 @@ export default function Services() {
         </div>
         <div className="flex gap-4 pt-16 pl-40 absolute">
           {getVisibleImages().map((image, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div key={index} className="flex flex-col">
               <img
                 src={image.src}
                 alt={image.title}
