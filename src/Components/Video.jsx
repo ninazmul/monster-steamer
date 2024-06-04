@@ -10,7 +10,7 @@ export default function Video() {
         className="h-[550px] w-full object-cover rounded-lg z-10"
       />
       <div className="absolute bottom-10 right-10 z-20">
-        <MdPlayArrow className="text-8xl text-white bg-[#00CCF8] rounded-full" />
+        <MdPlayArrow className="text-4xl md:text-6xl lg:text-8xl text-white bg-[#00CCF8] rounded-full" />
       </div>
     </div>
   );
