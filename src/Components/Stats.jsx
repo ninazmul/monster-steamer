@@ -3,30 +3,30 @@ import bubble from "../assets/Bubble.png";
 
 export default function Stats() {
   return (
-    <div className="flex items-center justify-around gap-20 m-20">
-      <div className="grid grid-cols-2 gap-20">
-        <div className="w-64">
+    <div className="flex items-center justify-around gap-20 m-10 lg:m-20 flex-wrap-reverse">
+      <div className="grid md:grid-cols-2 gap-10 lg:gap-20">
+        <div className="w-64 text-center md:text-start">
           <p className="text-sm">Since</p>
           <h2 className="text-6xl font-bold font-inter py-2">2010</h2>
           <h3 className="text-gray-500">
             Providing the same level of quality service
           </h3>
         </div>
-        <div className="w-64">
+        <div className="w-64 text-center md:text-start">
           <p className="text-sm">Operate</p>
           <h2 className="text-6xl font-bold font-inter py-2">3</h2>
           <h3 className="text-gray-500">
             Trucks for fast & reliable cleaning service
           </h3>
         </div>
-        <div className="w-64">
+        <div className="w-64 text-center md:text-start">
           <p className="text-sm">Over</p>
           <h2 className="text-6xl font-bold font-inter py-2">8000+</h2>
           <h3 className="text-gray-500">
             Home & Businesses trust us for cleaning services
           </h3>
         </div>
-        <div className="w-64">
+        <div className="w-64 text-center md:text-start">
           <p className="text-sm">4.9 star,</p>
           <h2 className="text-6xl font-bold font-inter py-2">1200+</h2>
           <h3 className="text-gray-500">Homeowners reviewed us on internet.</h3>
