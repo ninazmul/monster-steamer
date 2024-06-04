@@ -2,11 +2,11 @@ import { Button } from "flowbite-react";
 
 export default function ServeArea() {
     return (
-      <div className="mx-20 bg-[#00CCF8] rounded-lg p-20">
-        <h1 className="text-7xl font-bold font-inter uppercase text-center text-white ">
+      <div className="mx-8 md:mx-16 lg:mx-20 bg-[#00CCF8] rounded-lg py-8 px-4 md:p-16 lg:p-20">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-inter uppercase text-center text-white ">
           Area We Serve
         </h1>
-        <div className="pt-16 px-20">
+        <div className="pt-8 md:pt-16 lg:px-20">
           <div className="flex flex-wrap gap-4 text-center justify-center">
             <Button color="light">San Diego</Button>
             <Button color="light">Oceanside</Button>

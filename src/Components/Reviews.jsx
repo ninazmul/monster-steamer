@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
@@ -47,6 +47,7 @@ const reviews = [
 
 export default function Reviews() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [numVisible, setNumVisible] = useState(3);
 
     const handlePrev = () => {
       setCurrentSlide((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
@@ -58,31 +59,50 @@ export default function Reviews() {
 
     const getVisibleReviews = () => {
       const visibleReviews = [];
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < numVisible; i++) {
         visibleReviews.push(reviews[(currentSlide + i) % reviews.length]);
       }
       return visibleReviews;
     };
+
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth >= 1024) {
+          setNumVisible(3);
+        } else if (window.innerWidth >= 768) {
+          setNumVisible(2);
+        } else {
+          setNumVisible(1);
+        }
+      };
+
+      window.addEventListener("resize", handleResize);
+      handleResize();
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
   return (
-    <div className="bg-[#153339] rounded-t-[40px] p-20">
+    <div className="bg-[#153339] rounded-t-[40px] p-10 md:p-20">
       <div>
-        <h1 className="text-7xl font-bold text-white font-inter uppercase text-center">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white font-inter uppercase text-center">
           Clients Feedback
         </h1>
-        <div className="flex flex-col items-center justify-center gap-4 p-10">
-          <p className="text-gray-400 text-sm">
+        <div className="flex flex-col items-center justify-center gap-4 p-4 md:p-10">
+          <p className="text-gray-400 text-sm text-center lg:text-start">
             We have <span className="text-white">1200+ reviews</span> from Yelp
             and Google with a combined result of 4.9 star rating, welcome to
             read our clients' feedback.
           </p>
           <div className="flex items-center gap-10">
-            <Link to="/pricing" className="text-teal-400 flex gap-1 text-sm">
+            <Link to="/pricing" className="text-teal-400 flex gap-1 text-xs md:text-sm">
               See All Google Reviews
               <MdArrowOutward className="text-xs text-gray-400" />
             </Link>
             <Link
               to="tel:619-201-9480"
-              className="text-teal-400 flex gap-1 text-sm"
+              className="text-teal-400 flex gap-1 text-xs md:text-sm"
             >
               See All Yelp Reviews
               <MdArrowOutward className="text-xs text-gray-400" />
@@ -91,11 +111,12 @@ export default function Reviews() {
         </div>
       </div>
       <div className="flex flex-col justify-center self-center items-center">
-        <div className="flex gap-4 pt-16 pb-10">
+        <div className="flex gap-4 pt-8 md:pt-16 pb-10">
           {getVisibleReviews().map((review, index) => (
             <div
               key={index}
-              className="flex flex-col bg-white p-4 rounded-lg gap-10 w-full items-stretch justify-between"
+              className="flex flex-col bg-[#002932]
+ md:bg-white text-white md:text-black p-4 rounded-lg gap-10 w-full items-stretch justify-between"
             >
               <p className="text-sm">{review.description}</p>
               <div className="flex items-center justify-between">
@@ -161,7 +182,7 @@ export default function Reviews() {
           ))}
         </div>
         <div className="relative">
-          <div className="flex gap-4 absolute self-center z-40">
+          <div className="flex gap-4 items-center justify-center z-40">
             <MdOutlineArrowBackIosNew
               className="text-4xl text-gray-400 border p-2 rounded-lg cursor-pointer"
               onClick={handlePrev}
