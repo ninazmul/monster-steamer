@@ -10,3 +10,9 @@
   font-variation-settings:
     "slnt" 0;
 }
+
+.group:hover .fa-map-marker-alt {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+

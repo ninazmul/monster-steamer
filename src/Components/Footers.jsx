@@ -21,34 +21,36 @@ import ServeArea from "./ServeArea";
 const Footers = () => {
   return (
     <Footer bgDark className="rounded-none bg-[#00343E] relative">
-      <div className="absolute top-[-400px]">
+      <div className="absolute top-[-500px] md:top-[-450px] lg:top-[-400px]">
         <ServeArea />
       </div>
-      <div className="w-full mx-12 mb-12 mt-32">
-        <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
-          <img src={logo} alt="monster steamer" className="mr-3 h-6 sm:h-9" />
-          <Footer.LinkGroup className="flex items-center gap-2">
-            <Link className="flex items-center gap-1 text-white text-sm">
-              <FaPhone className="text-[#00CCF8] bg-[#002932] p-1.5 text-2xl rounded-lg" />
-              (619) 201-9480
-            </Link>
-            <Link className="flex items-center gap-1 text-white">
-              <IoMdMail className="text-[#00CCF8] bg-[#002932] p-1 text-2xl rounded-lg" />
-              info@monstersteamer.net
-            </Link>
-            <Link className="flex items-center gap-1 text-white">
-              <FaLocationDot className="text-[#00CCF8] bg-[#002932] p-1.5 text-2xl rounded-lg" />
-              San Diego, CA.
-            </Link>
-          </Footer.LinkGroup>
-          <Footer.LinkGroup className="flex items-center gap-2">
-            <FaFacebook className="text-[#00CCF8] bg-[#002932] p-1 text-2xl rounded-lg" />
-            <FaInstagram className="text-[#00CCF8] bg-[#002932] p-1 text-2xl rounded-lg" />
-            <FaArrowUpLong className="text-[#00CCF8] bg-[#002932] p-1.5 text-2xl rounded-lg" />
-          </Footer.LinkGroup>
+      <div className="w-full md:mx-12 mb-12 mt-96 md:mt-32">
+        <div className="w-full lg:justify-between flex items-center flex-wrap justify-center gap-10">
+          <img src={logo} alt="monster steamer" className="lg:mr-3 mt-20 md:my-4 lg:my-0 h-12 lg:h-9" />
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+            <Footer.LinkGroup className="flex items-center flex-col md:flex-row md:gap-2">
+              <Link className="flex items-center gap-1 text-white text-sm">
+                <FaPhone className="text-[#00CCF8] bg-[#002932] p-1.5 text-2xl rounded-lg" />
+                (619) 201-9480
+              </Link>
+              <Link className="flex items-center gap-1 text-white">
+                <IoMdMail className="text-[#00CCF8] bg-[#002932] p-1 text-2xl rounded-lg" />
+                info@monstersteamer.net
+              </Link>
+              <Link className="flex items-center gap-1 text-white">
+                <FaLocationDot className="text-[#00CCF8] bg-[#002932] p-1.5 text-2xl rounded-lg" />
+                San Diego, CA.
+              </Link>
+            </Footer.LinkGroup>
+            <Footer.LinkGroup className="flex items-center gap-2">
+              <FaFacebook className="text-[#00CCF8] bg-[#002932] p-1 text-2xl rounded-lg" />
+              <FaInstagram className="text-[#00CCF8] bg-[#002932] p-1 text-2xl rounded-lg" />
+              <FaArrowUpLong className="text-[#00CCF8] bg-[#002932] p-1.5 text-2xl rounded-lg" />
+            </Footer.LinkGroup>
+          </div>
         </div>
-        <div className="w-full bg-[#002932] m-8 mx-auto rounded-xl">
-          <div className="grid w-full grid-cols-2 gap-8 p-20 md:grid-cols-4">
+        <div className="md:w-full bg-[#002932] my-8 mx-4 md:mx-auto rounded-xl">
+          <div className="grid w-full grid-cols-1 gap-10 p-10 md:p-20 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <Footer.Title title="About" className="text-white" />
               <Footer.LinkGroup col className="text-white">
@@ -82,7 +84,7 @@ const Footers = () => {
                 <Footer.Link href="#">Privacy Policy</Footer.Link>
               </Footer.LinkGroup>
             </div>
-            <div>
+            <div className="flex flex-wrap md:flex-row">
               <img src={homeAdvisor} alt="homeAdvisor" className="w-32 pb-10" />
               <div className="py-4">
                 <h3 className="text-white text-xs">
@@ -108,7 +110,7 @@ const Footers = () => {
             </div>
           </div>
         </div>
-        <div className="w-full sm:flex sm:items-center sm:justify-between">
+        <div className="md:w-full p-4 gap-4 flex items-center justify-between flex-wrap">
           <Footer.Copyright
             href="#"
             by="Monster Steamer Carpet Cleaning."

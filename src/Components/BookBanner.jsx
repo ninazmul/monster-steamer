@@ -3,7 +3,7 @@ import van from "../assets/van.png";
 
 export default function BookBanner() {
   return (
-    <div className="mx-10 md:mx-20 md:mt-20 mb-[450px] md:mb-[500px] lg:mb-[650px] relative">
+    <div className="mx-10 md:mx-20 md:mt-20 mb-[550px] md:mb-[500px] lg:mb-[650px] relative">
       <div className="flex flex-col gap-24 md:gap-36 lg:gap-4 w-full md:w-2/3 lg:w-2/3">
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-inter font-bold uppercase">
           Book Online And get 10% Off.
